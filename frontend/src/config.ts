@@ -1,0 +1,1 @@
+export const WS_SERVER = "ws://192.168.1.80:8000";

@@ -1,0 +1,88 @@
+.question-view {
+  display: flex;
+  flex-direction: column; /* СТАВИМ КОЛОНКУ по умолчанию */
+  flex-wrap: wrap; /* Позволяет wrap-ить по горизонтали */
+  align-items: stretch;
+  justify-content: center;
+  gap: 1rem;
+
+  height: fit-content;
+  max-height: 100vh;
+  width: fit-content;
+  max-width: 100vw;
+
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.question-view-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* flex: 1 1 350px; */
+
+  min-width: 300px;
+  min-height: fit-content;
+  max-height: 50vh;
+  /* max-width: 90vh; */ /* Мне нужно, чтобы этот парметры был включен, когда question-view wrap */
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.question-view h2 {
+  font-size: 1.3em;
+  margin: 0;
+  font-weight: bold;
+}
+
+.question-view .question-type {
+  font-size: 1em;
+  font-weight: lighter;
+}
+
+.question-view .question {
+  font-size: 1.6em;
+  font-weight: bold;
+  /* margin-top: 1rem; */
+  text-wrap-style: balance;
+}
+
+.question-images {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 0.5rem;
+  max-height: 40vh;
+  width: 100%;
+}
+
+.question-images img {
+  object-fit: contain;
+  border-radius: 1rem;
+  box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  height: 100%;
+}
+
+.question-answers {
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+  max-height: 45vh;
+}
+
+.question-answer {
+  border: 1px solid var(--border-color);
+  border-radius: 0.5rem;
+  font-size: 1.2em;
+  font-weight: normal;
+  padding: 0 0.5rem;
+  text-wrap-style: balance;
+}
+
+.question-answer-correct {
+  background-color: #d4edda; /* Зеленый фон для правильного ответа */
+  color: #155724; /* Темно-зеленый текст */
+}

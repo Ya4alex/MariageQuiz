@@ -1,0 +1,42 @@
+.timer {
+    font-size: 2em;
+    font-style: italic;
+}
+
+/* Исправлено название класса */
+.timer-warning {
+  /* например, можно добавить цвет для последних секунд */
+  color: #dc3545;
+}
+
+.timer-bar-root {
+  position: relative;
+  width: 100%;
+  min-height: 22px;
+  background: #e9ecef;
+  border-radius: 11px;
+  overflow: hidden;
+}
+
+.timer-bar {
+  position: absolute;
+  height: 100%;
+  background-color: #28a745;
+  transition: width 0.1s linear, background 2s;
+}
+
+.timer-bar-danger {
+  background: #dc3545; /* Красный цвет для опасной зоны */
+}
+
+.timer-bar-label {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #222;
+  line-height: 22px;
+  pointer-events: none;
+}

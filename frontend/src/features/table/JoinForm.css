@@ -1,0 +1,74 @@
+.join-form-container {
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+  padding: 1.5rem 1rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.join-form-container p,
+.join-form-container em {
+  margin: 0;
+  font-size: 1em;
+}
+.join-form-container ul {
+  display: flex;
+  flex-direction: column;
+  list-style: decimal;
+  align-items: flex-start;
+}
+.join-form-container li {
+  font-size: 1.2em;
+  text-align: left;
+}
+
+.join-form-container li::marker {
+  font-weight: bolder;
+}
+
+
+
+.join-form-container input[type="text"] {
+  width: 100%;
+  padding: 0.8rem 0rem;
+  margin: 0.7rem 0 1rem 0;
+  box-sizing: border-box;
+
+  border: 1px solid var(--border-color);
+  border-radius: 0.7rem;
+
+  font-size: 1rem;
+  color: #333;
+  background-color: #f9f9f9;
+
+  transition: border-color 0.2s ease-in-out;
+}
+.join-form-container input[type="text"]:focus {
+  border-color: var(--accent-color);
+  outline: none;
+}
+.join-form-container input[type="text"]::placeholder {
+  color: #999;
+}
+.join-form-container button:hover {
+  background: #3f5bff;
+}
+
+@media (max-width: 600px) {
+  .join-form-container {
+    padding: 1rem 0.5rem;
+    border-radius: 10px;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05);
+  }
+  .join-form-container input[type="text"],
+  .join-form-container button {
+    font-size: 1rem;
+    padding: 0.7rem 0.7rem;
+  }
+}

@@ -1,0 +1,296 @@
+from data.table.models import QuestionType
+
+QUESTIONS = [
+    # Тестовые вопросы
+    {
+        'question_type': QuestionType.SINGLE_CHOICE,
+        'question': "Мы на свадьбе",
+        'images': [],
+        'answer_images': [],
+        'answers': [
+            "Стёпы и Кати",
+            "Акакия и Анжелины",
+            "Будем пьяны",
+            "Мы на свадьбе?"
+        ],
+        'correct_answers': [0],
+        'score': 0,
+        'categories': ["_test"],
+        'timer': 25.0,
+    },
+    {
+        'question_type': QuestionType.MULTIPLE_CHOICE,
+        'question': "На свадьбе мы",
+        'images': [],
+        'answer_images': [],
+        'answers': [
+            "Прыгаем в торт",
+            "Поздравляем жениха и невесту",
+            "Спим",
+            "Радуемся за Акакия и Анжелину"
+        ],
+        'correct_answers': [1, 3],
+        'score': 0,
+        'categories': ["_test"],
+        'timer': 25.0,
+    },
+
+    # Стёпа
+    {
+        'question_type': QuestionType.SINGLE_CHOICE,
+        'question': "Первая фотография со Стёпой",
+        'images': [],
+        'answer_images': ["/static/quiz/s_3_ans_1.jpg",  # "/static/quiz/s_3_ans_2.jpg",
+                          "/static/quiz/s_3_ans_3.jpg", "/static/quiz/s_3_ans_4.jpg"],
+        'answers': [
+            "в женском платье",
+            "в пеленках",
+            "В целлофановом пакете",
+            "В плетеной корзинке"
+        ],
+        'correct_answers': [0],
+        'score': 1.0,
+        'categories': ["stepa"],
+        'timer': 40.0,
+    },
+    {
+        'question_type': QuestionType.SINGLE_CHOICE,
+        'question': "Первую зарплату получал",
+        'images': [],
+        'answer_images': ['/static/quiz/s_4_ans.jpg'],
+        'answers': [
+            "Молоком",
+            "Мясом",
+            "Рыбой",
+            "Долларами"
+        ],
+        'correct_answers': [0],
+        'score': 1.0,
+        'categories': ["stepa"],
+        'timer': 40.0,
+    },
+    {
+        'question_type': QuestionType.SINGLE_CHOICE,
+        'question': "С кем Стёпа ловил красную рыбу в заповеднике?",
+        'images': [],
+        'answer_images': [],
+        'answers': [
+            "С друзьями",
+            "С местным браконьером",
+            "С инспектором заповедника",
+            "С папой"
+        ],
+        'correct_answers': [2],
+        'score': 1.0,
+        'categories': ["stepa"],
+        'timer': 40.0,
+    },
+    {
+        'question_type': QuestionType.SINGLE_CHOICE,
+        'question': "Сколько у Стёпы племянников и племянниц",
+        'images': [],
+        'answer_images': [],
+        'answers': [
+            "21",
+            "23",
+            "17",
+            "19"
+        ],
+        'correct_answers': [1],
+        'score': 1.0,
+        'categories': ["stepa"],
+        'timer': 40.0,
+    },
+    {
+        'question_type': QuestionType.MULTIPLE_CHOICE,
+        'question': "Правда, что",
+        'images': [],
+        'answer_images': [],
+        'answers': [
+            "Проиграл в конкурсе мистер МГУ",
+            "Прыгал с парашутом",
+            "Стёпа был пажом",
+            "Играет на флейте",
+            "Обошёл Эльбрус",
+            "Арестован за кражу"
+        ],
+        'correct_answers': [2, 4, 5],
+        'score': 1.0,
+        'categories': ["stepa"],
+        'timer': 60.0,
+    },
+
+    # Катя
+    {
+        'question_type': QuestionType.SINGLE_CHOICE,
+        'question': "Игрушка, которая сохранилась из раннего детства",
+        'images': [],
+        'answer_images': [],
+        'answers': [
+            "Кукла в розовом платье",
+            "Полуразваленный домик",
+            "Плюшевый бурый медведь",
+            "Красная машина с открывающимися дверьми"
+        ],
+        'correct_answers': [2],
+        'score': 1.0,
+        'categories': ["katya"],
+        'timer': 40.0,
+    },
+    {
+        'question_type': QuestionType.SINGLE_CHOICE,
+        'question': "В скольких школах училась Катя",
+        'images': [],
+        'answer_images': [],
+        'answers': [
+            "3х",
+            "1ой",
+            "2х",
+            "4х"
+        ],
+        'correct_answers': [0],
+        'score': 1.0,
+        'categories': ["katya"],
+        'timer': 40.0,
+    },
+    {
+        'question_type': QuestionType.MULTIPLE_CHOICE,
+        'question': "Чем Катя действительно занималась?",
+        'images': [],
+        'answer_images': [],
+        'answers': [
+            "Хоровое пение",
+            "Балет",
+            "Флейта",
+            "Плавание",
+            "Квадробинг",
+            "Фортепиано",
+            "Русские народные танцы",
+            "Гитара",
+            "Самбо",
+            "Конный спорт",
+            "Степ",
+            "Фигурное катание",
+            "Тхэквондо",
+            "Хоббихорсинг"
+        ],
+        'correct_answers': [0, 1, 3, 5, 7, 8, 10, 11, 12],
+        'score': 1.0,
+        'categories': ["katya"],
+        'timer': 60.0,
+    },
+    {
+        'question_type': QuestionType.SINGLE_CHOICE,
+        'question': "Какое правонарушение совершила Катя",
+        'images': [],
+        'answer_images': [],
+        'answers': [
+            "Разбила в школе окно кидаясь пеналом",
+            "Проехала на охраняемый объект производства с полным багажником алкоголя и это заметили",
+            "Украла торт из магазина около дома и сбежала",
+            "Уехала от полиции"
+        ],
+        'correct_answers': [0],
+        'score': 1.0,
+        'categories': ["katya"],
+        'timer': 40.0,
+    },
+    {
+        'question_type': QuestionType.SINGLE_CHOICE,
+        'question': "Почему Катя в детстве хотела стать океанологом",
+        'images': [],
+        'answer_images': [],
+        'answers': [
+            "Очень любила рыб и кораллы",
+            "Папа привил любовь к охоте на рыб и это переросло в идею работать с ними",
+            "Хотела жить у моря и ни о чём не думать",
+            "Посмотрела фильм ВВС об океане и оказалась очень впечатлительной"
+        ],
+        'correct_answers': [0],
+        'score': 1.0,
+        'categories': ["katya"],
+        'timer': 40.0,
+    },
+
+    # Катя и Стёпа
+    {
+        'question_type': QuestionType.MULTIPLE_CHOICE,
+        'question': "Выберите правильные ответы",
+        'images': [],
+        'answer_images': [],
+        'answers': [
+            "Катя и Стёпа познакомились в МГУ, потому что учились в одной группе",
+            "Стёпа и Катя два раза меняли дату свадьбы",
+            "Имеют одинаковый музыкальный вкус",
+            "Ребята любят совместный просмотр фильмов"
+        ],
+        'correct_answers': [0, 3],
+        'score': 1.0,
+        'categories': ["stepa_katya"],
+        'timer': 40.0,
+    },
+    {
+        'question_type': QuestionType.SINGLE_CHOICE,
+        'question': "Где Стёпа сделал предложение",
+        'images': [],
+        'answer_images': [],
+        'answers': [
+            "На берегу Волги",
+            "На крыше",
+            "На колесе обозрения",
+            "На свадьбе брата"
+        ],
+        'correct_answers': [0],
+        'score': 1.0,
+        'categories': ["stepa_katya"],
+        'timer': 40.0,
+    },
+    {
+        'question_type': QuestionType.SINGLE_CHOICE,
+        'question': "Почему опасно приглашать Стёпу и Катю в гости",
+        'images': [],
+        'answer_images': [],
+        'answers': [
+            "Останутся у вас жить",
+            "Продадут Ваше имущество на Авито",
+            "Сметут всю еду из холодильника",
+            "Будут настаивать на уборке"
+        ],
+        'correct_answers': [0],
+        'score': 1.0,
+        'categories': ["stepa_katya"],
+        'timer': 40.0,
+    },
+    {
+        'question_type': QuestionType.SINGLE_CHOICE,
+        'question': "Какая у Стёпы и Кати схожая привычка",
+        'images': [],
+        'answer_images': [],
+        'answers': [
+            "Делать зарядку каждое утро",
+            "Делать расклад карт таро",
+            "Спать до 12 дня",
+            "До конца убеждать всех в своей правоте"
+        ],
+        'correct_answers': [3],
+        'score': 1.0,
+        'categories': ["stepa_katya"],
+        'timer': 40.0,
+    },
+    {
+        'question_type': QuestionType.SINGLE_CHOICE,
+        'question': "Что Катя не может принять в Стёпе",
+        'images': [],
+        'answer_images': [],
+        'answers': [
+            "Желание назвать сына Степаном Степановичем",
+            "Пристрастие к рыбе",
+            "Его громкий «шёпот» на лекциях",
+            "Отсутствие наследства"
+        ],
+        'correct_answers': [0],
+        'score': 1.0,
+        'categories': ["stepa_katya"],
+        'timer': 40.0,
+    },
+]

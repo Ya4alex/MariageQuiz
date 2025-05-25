@@ -1,0 +1,138 @@
+.question-form-container {
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+  padding: 1.5rem 1rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.question-form-container h2 {
+}
+
+.question-form-container em {
+  margin: 0;
+}
+
+.question-answers-list {
+  display: flex;
+  flex-direction: column;
+  list-style: decimal;
+  align-items: flex-start;
+  margin: 0;
+  margin-bottom: 1rem;
+}
+
+.question-answers-list li {
+  font-size: 1.2em;
+  text-align: left;
+}
+
+.answer-label {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 4px;
+  margin-bottom: 4px;
+  margin-right: 8px;
+  transition: background 0.2s, border 0.2s;
+}
+
+.correct-selected {
+  background: #d4edda;
+  border: 2px solid #28a745;
+}
+
+.incorrect-selected {
+  background: #f8d7da;
+  border: 2px solid #dc3545;
+}
+
+.correct-unselected {
+  background: #cce5ff;
+  border: 2px solid #007bff;
+}
+
+.default-label {
+  background: transparent;
+  border: 2px solid transparent;
+}
+
+/* Скрываем стандартный чекбокс/радио */
+.answer-label input[type="checkbox"],
+.answer-label input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 22px;
+  height: 22px;
+  border: 2px solid #bbb;
+  border-radius: 6px;
+  margin-right: 8px;
+  vertical-align: middle;
+  background: #fff;
+  transition: border 0.2s, box-shadow 0.2s, background 0.2s;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+  outline: none;
+  box-shadow: none;
+  -webkit-tap-highlight-color: transparent; /* Добавьте эту строку */
+}
+
+/* Радио — круглый */
+.answer-label input[type="radio"] {
+  border-radius: 50%;
+}
+
+/* Зеленый — выбран и правильный */
+.answer-label input[type="checkbox"].correct,
+.answer-label input[type="radio"].correct {
+  border-color: #28a745;
+  background: #d4edda;
+}
+
+/* Красный — выбран и неправильный */
+.answer-label input[type="checkbox"].incorrect,
+.answer-label input[type="radio"].incorrect {
+  border-color: #dc3545;
+  background: #f8d7da;
+}
+
+/* Галочка для чекбокса */
+.answer-label input[type="checkbox"]:checked::after {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  margin: 4px auto;
+  border-radius: 2px;
+  background: #333;
+}
+
+/* Точка для радио */
+.answer-label input[type="radio"]:checked::after {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  margin: 5px auto;
+  border-radius: 50%;
+  background: #333;
+}
+
+/* Отключаем стандартную подсветку чекбоксов и радио */
+.answer-label input[type="checkbox"]:focus,
+.answer-label input[type="radio"]:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.disabled-answer {
+  opacity: 0.6;
+  pointer-events: none;
+  filter: grayscale(0.3);
+}

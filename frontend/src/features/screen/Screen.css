@@ -1,0 +1,67 @@
+.screen-root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+
+  font-size: 2rem;
+}
+
+/* Extra small devices (phones, less than 576px) */
+@media (max-width: 575.98px) {
+  .screen-root {
+    font-size: 0.5rem;
+  }
+}
+
+/* Small devices (phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .screen-root {
+    font-size: 0.8rem;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 1023.98px) {
+  .screen-root {
+    font-size: 1.1rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .screen-root {
+    font-size: 1.4rem;
+  }
+}
+
+/* FullHD и выше */
+@media (min-width: 1920px) {
+  .screen-root {
+    font-size: 1.7rem;
+  }
+}
+
+/* 2K и выше */
+@media (min-width: 2560px) {
+  .screen-root {
+    font-size: 2rem;
+  }
+}
+
+/* 4K и выше */
+@media (min-width: 3840px) {
+  .screen-root {
+    font-size: 2.3rem;
+  }
+}
+
+/* 8K и выше — всё равно максимум 2rem */
+@media (min-width: 7680px) {
+  .screen-root {
+    font-size: 2.6rem;
+  }
+}
+
