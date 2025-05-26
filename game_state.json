@@ -1,0 +1,587 @@
+{
+  "state": "in_results",
+  "tables": {
+    "1": {
+      "id": 1,
+      "name": null,
+      "state": "in_results",
+      "leader": true,
+      "observers_count": 0,
+      "table_answers": [],
+      "answered": false,
+      "result": {
+        "score": 0,
+        "question_score": {},
+        "categories": {
+          "stepa": 0,
+          "katya": 0,
+          "stepa_katya": 0
+        },
+        "answers": {}
+      }
+    },
+    "2": {
+      "id": 2,
+      "name": null,
+      "state": "in_results",
+      "leader": true,
+      "observers_count": 0,
+      "table_answers": [],
+      "answered": false,
+      "result": {
+        "score": 0,
+        "question_score": {},
+        "categories": {
+          "stepa": 0,
+          "katya": 0,
+          "stepa_katya": 0
+        },
+        "answers": {}
+      }
+    },
+    "3": {
+      "id": 3,
+      "name": null,
+      "state": "in_results",
+      "leader": true,
+      "observers_count": 0,
+      "table_answers": [],
+      "answered": false,
+      "result": {
+        "score": 0,
+        "question_score": {},
+        "categories": {
+          "stepa": 0,
+          "katya": 0,
+          "stepa_katya": 0
+        },
+        "answers": {}
+      }
+    },
+    "4": {
+      "id": 4,
+      "name": null,
+      "state": "in_results",
+      "leader": true,
+      "observers_count": 0,
+      "table_answers": [],
+      "answered": false,
+      "result": {
+        "score": 0,
+        "question_score": {},
+        "categories": {
+          "stepa": 0,
+          "katya": 0,
+          "stepa_katya": 0
+        },
+        "answers": {}
+      }
+    },
+    "5": {
+      "id": 5,
+      "name": null,
+      "state": "in_results",
+      "leader": true,
+      "observers_count": 0,
+      "table_answers": [],
+      "answered": false,
+      "result": {
+        "score": 0,
+        "question_score": {},
+        "categories": {
+          "stepa": 0,
+          "katya": 0,
+          "stepa_katya": 0
+        },
+        "answers": {}
+      }
+    },
+    "6": {
+      "id": 6,
+      "name": null,
+      "state": "in_results",
+      "leader": false,
+      "observers_count": 0,
+      "table_answers": [],
+      "answered": false,
+      "result": {
+        "score": 0,
+        "question_score": {},
+        "categories": {
+          "stepa": 0,
+          "katya": 0,
+          "stepa_katya": 0
+        },
+        "answers": {}
+      }
+    },
+    "7": {
+      "id": 7,
+      "name": null,
+      "state": "in_results",
+      "leader": false,
+      "observers_count": 0,
+      "table_answers": [],
+      "answered": false,
+      "result": {
+        "score": 0,
+        "question_score": {},
+        "categories": {
+          "stepa": 0,
+          "katya": 0,
+          "stepa_katya": 0
+        },
+        "answers": {}
+      }
+    },
+    "8": {
+      "id": 8,
+      "name": null,
+      "state": "in_results",
+      "leader": false,
+      "observers_count": 0,
+      "table_answers": [],
+      "answered": false,
+      "result": {
+        "score": 0,
+        "question_score": {},
+        "categories": {
+          "stepa": 0,
+          "katya": 0,
+          "stepa_katya": 0
+        },
+        "answers": {}
+      }
+    }
+  },
+  "questions": [
+    {
+      "id": 0,
+      "categories": [
+        "_test"
+      ],
+      "question_type": "single_choice",
+      "question": "Мы на свадьбе",
+      "images": [],
+      "answer_images": [],
+      "answers": [
+        "Стёпы и Кати",
+        "Акакия и Анжелины",
+        "Будем пьяны",
+        "Мы на свадьбе?"
+      ],
+      "correct_answers": [
+        0
+      ],
+      "score": 0.0,
+      "timer": 25.0,
+      "time_left": 0.0
+    },
+    {
+      "id": 1,
+      "categories": [
+        "_test"
+      ],
+      "question_type": "multiple_choice",
+      "question": "На свадьбе мы",
+      "images": [],
+      "answer_images": [],
+      "answers": [
+        "Прыгаем в торт",
+        "Поздравляем жениха и невесту",
+        "Спим",
+        "Радуемся за Акакия и Анжелину"
+      ],
+      "correct_answers": [
+        1,
+        3
+      ],
+      "score": 0.0,
+      "timer": 25.0,
+      "time_left": 0.0
+    },
+    {
+      "id": 2,
+      "categories": [
+        "stepa"
+      ],
+      "question_type": "single_choice",
+      "question": "Первая фотография со Стёпой",
+      "images": [],
+      "answer_images": [
+        "/static/quiz/3_a_1.jpg",
+        "/static/quiz/3_a_2.jpg",
+        "/static/quiz/3_a_3.jpg"
+      ],
+      "answers": [
+        "в пеленках",
+        "В целлофановом пакете",
+        "в платье",
+        "В плетеной корзинке"
+      ],
+      "correct_answers": [
+        2
+      ],
+      "score": 1.0,
+      "timer": 40.0,
+      "time_left": 0.0
+    },
+    {
+      "id": 3,
+      "categories": [
+        "stepa"
+      ],
+      "question_type": "single_choice",
+      "question": "Первую зарплату получал",
+      "images": [],
+      "answer_images": [
+        "/static/quiz/4_a.jpg"
+      ],
+      "answers": [
+        "Мясом",
+        "Рыбой",
+        "Долларами",
+        "Молоком",
+        "Пивом"
+      ],
+      "correct_answers": [
+        3
+      ],
+      "score": 1.0,
+      "timer": 40.0,
+      "time_left": 0.0
+    },
+    {
+      "id": 4,
+      "categories": [
+        "stepa"
+      ],
+      "question_type": "single_choice",
+      "question": "С кем Стёпа ловил красную рыбу в заповеднике?",
+      "images": [],
+      "answer_images": [
+        "/static/quiz/5_a_1.jpg",
+        "/static/quiz/5_a_2.jpg"
+      ],
+      "answers": [
+        "С друзьями",
+        "С местным браконьером",
+        "С инспектором заповедника",
+        "С папой",
+        "С медведем наперегонки"
+      ],
+      "correct_answers": [
+        2
+      ],
+      "score": 1.0,
+      "timer": 40.0,
+      "time_left": 0.0
+    },
+    {
+      "id": 5,
+      "categories": [
+        "stepa"
+      ],
+      "question_type": "single_choice",
+      "question": "Сколько у Стёпы племянников и племянниц",
+      "images": [],
+      "answer_images": [
+        "/static/quiz/6_a.jpg"
+      ],
+      "answers": [
+        "21",
+        "23",
+        "17",
+        "19",
+        "0 (ну максимум 1)"
+      ],
+      "correct_answers": [
+        1
+      ],
+      "score": 1.0,
+      "timer": 40.0,
+      "time_left": 0.0
+    },
+    {
+      "id": 6,
+      "categories": [
+        "stepa"
+      ],
+      "question_type": "multiple_choice",
+      "question": "Правда, что Стёпа",
+      "images": [
+        "/static/quiz/7_q.jpg"
+      ],
+      "answer_images": [
+        "/static/quiz/7_a_1.jpg",
+        "/static/quiz/7_a_2.jpg"
+      ],
+      "answers": [
+        "Проиграл в конкурсе мистер МГУ",
+        "Прыгал с парашютом",
+        "Был пажом о рыцаря",
+        "Играет на флейте",
+        "Обошёл Эльбрус",
+        "Арестован за кражу",
+        "Знает азбуку Морзе"
+      ],
+      "correct_answers": [
+        2,
+        4,
+        5
+      ],
+      "score": 1.0,
+      "timer": 60.0,
+      "time_left": 1.2116482257843018
+    },
+    {
+      "id": 7,
+      "categories": [
+        "katya"
+      ],
+      "question_type": "single_choice",
+      "question": "Игрушка, которая сохранилась из раннего детства",
+      "images": [],
+      "answer_images": [],
+      "answers": [
+        "Кукла в розовом платье",
+        "Полуразваленный домик",
+        "Плюшевый бурый медведь",
+        "Красная машина с открывающимися дверьми"
+      ],
+      "correct_answers": [
+        2
+      ],
+      "score": 1.0,
+      "timer": 40.0,
+      "time_left": 0.0
+    },
+    {
+      "id": 8,
+      "categories": [
+        "katya"
+      ],
+      "question_type": "single_choice",
+      "question": "В скольких школах училась Катя",
+      "images": [],
+      "answer_images": [],
+      "answers": [
+        "3х",
+        "1ой",
+        "2х",
+        "4х"
+      ],
+      "correct_answers": [
+        0
+      ],
+      "score": 1.0,
+      "timer": 40.0,
+      "time_left": 0.9893310070037842
+    },
+    {
+      "id": 9,
+      "categories": [
+        "katya"
+      ],
+      "question_type": "multiple_choice",
+      "question": "Чем Катя действительно занималась?",
+      "images": [],
+      "answer_images": [],
+      "answers": [
+        "Хоровое пение",
+        "Балет",
+        "Флейта",
+        "Плавание",
+        "Квадробинг",
+        "Фортепиано",
+        "Русские народные танцы",
+        "Гитара",
+        "Самбо",
+        "Конный спорт",
+        "Степ",
+        "Фигурное катание",
+        "Тхэквондо",
+        "Хоббихорсинг"
+      ],
+      "correct_answers": [
+        0,
+        1,
+        3,
+        5,
+        7,
+        8,
+        10,
+        11,
+        12
+      ],
+      "score": 1.0,
+      "timer": 90.0,
+      "time_left": 54.33352088928223
+    },
+    {
+      "id": 10,
+      "categories": [
+        "katya"
+      ],
+      "question_type": "single_choice",
+      "question": "Какое правонарушение совершила Катя",
+      "images": [],
+      "answer_images": [
+        "/static/quiz/11_a.jpg"
+      ],
+      "answers": [
+        "Разбила в школе окно кидаясь пеналом",
+        "Проехала на охраняемый объект производства с полным багажником алкоголя и это заметили",
+        "Украла торт из магазина около дома и сбежала, торт съела",
+        "Уехала от полиции"
+      ],
+      "correct_answers": [
+        1
+      ],
+      "score": 1.0,
+      "timer": 40.0,
+      "time_left": 8.144497871398926
+    },
+    {
+      "id": 11,
+      "categories": [
+        "katya"
+      ],
+      "question_type": "single_choice",
+      "question": "Почему Катя в детстве хотела стать океанологом",
+      "images": [],
+      "answer_images": [],
+      "answers": [
+        "Очень любила рыб и кораллы",
+        "Папа привил любовь к охоте на рыб и это переросло в идею работать с ними",
+        "Хотела жить у моря и ни о чём не думать",
+        "Посмотрела фильм ВВС об океане и оказалась очень впечатлительной"
+      ],
+      "correct_answers": [
+        3
+      ],
+      "score": 1.0,
+      "timer": 40.0,
+      "time_left": 11.946610450744629
+    },
+    {
+      "id": 12,
+      "categories": [
+        "stepa_katya"
+      ],
+      "question_type": "single_choice",
+      "question": "Выберите правильные ответы",
+      "images": [],
+      "answer_images": [],
+      "answers": [
+        "Катя и Стёпа познакомились в МГУ, потому что учились в одной группе",
+        "Стёпа и Катя два раза меняли дату свадьбы",
+        "Имеют одинаковый музыкальный вкус",
+        "Ребята любят совместный просмотр фильмов"
+      ],
+      "correct_answers": [
+        1
+      ],
+      "score": 1.0,
+      "timer": 40.0,
+      "time_left": 14.428502321243286
+    },
+    {
+      "id": 13,
+      "categories": [
+        "stepa_katya"
+      ],
+      "question_type": "single_choice",
+      "question": "Где Стёпа сделал предложение",
+      "images": [],
+      "answer_images": [
+        "/static/quiz/14_a.jpg"
+      ],
+      "answers": [
+        "На берегу Волги",
+        "На крыше",
+        "На колесе обозрения",
+        "На свадьбе брата"
+      ],
+      "correct_answers": [
+        1
+      ],
+      "score": 1.0,
+      "timer": 40.0,
+      "time_left": 16.130255699157715
+    },
+    {
+      "id": 14,
+      "categories": [
+        "stepa_katya"
+      ],
+      "question_type": "single_choice",
+      "question": "Почему опасно приглашать Стёпу и Катю в гости",
+      "images": [],
+      "answer_images": [],
+      "answers": [
+        "Останутся у вас жить",
+        "Продадут Ваше имущество на Авито",
+        "Сметут всю еду из холодильника",
+        "Будут настаивать на уборке"
+      ],
+      "correct_answers": [
+        1
+      ],
+      "score": 1.0,
+      "timer": 40.0,
+      "time_left": 23.06859588623047
+    },
+    {
+      "id": 15,
+      "categories": [
+        "stepa_katya"
+      ],
+      "question_type": "single_choice",
+      "question": "Какая у Стёпы и Кати схожая привычка",
+      "images": [],
+      "answer_images": [],
+      "answers": [
+        "Делать зарядку каждое утро",
+        "Делать расклад карт таро",
+        "Спать до 12 дня",
+        "До конца убеждать всех в своей правоте"
+      ],
+      "correct_answers": [
+        3
+      ],
+      "score": 1.0,
+      "timer": 40.0,
+      "time_left": 26.132680654525757
+    },
+    {
+      "id": 16,
+      "categories": [
+        "stepa_katya"
+      ],
+      "question_type": "single_choice",
+      "question": "Что Катя не может принять в Стёпе",
+      "images": [],
+      "answer_images": [],
+      "answers": [
+        "Желание назвать сына Степаном Степановичем",
+        "Пристрастие к рыбе",
+        "Его громкий «шёпот» на лекциях",
+        "Отсутствие наследства"
+      ],
+      "correct_answers": [
+        0
+      ],
+      "score": 1.0,
+      "timer": 40.0,
+      "time_left": 28.70926833152771
+    }
+  ],
+  "current_question_index": 16,
+  "categories": [
+    "_test",
+    "stepa",
+    "katya",
+    "stepa_katya"
+  ]
+}
