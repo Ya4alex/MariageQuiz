@@ -10,58 +10,99 @@
   font-size: 2rem;
 }
 
-/* Extra small devices (phones, less than 576px) */
-@media (max-width: 575.98px) {
+/* 320px (small phones) */
+@media (max-width: 319.98px) {
+  .screen-root {
+    font-size: 0.4rem;
+  }
+}
+
+/* 360px (phones) */
+@media (min-width: 320px) and (max-width: 359.98px) {
+  .screen-root {
+    font-size: 0.4rem;
+  }
+}
+
+/* 400px (phones) */
+@media (min-width: 360px) and (max-width: 399.98px) {
   .screen-root {
     font-size: 0.5rem;
   }
 }
 
-/* Small devices (phones, 576px and up) */
+/* 480px (large phones) */
+@media (min-width: 400px) and (max-width: 479.98px) {
+  .screen-root {
+    font-size: 0.6rem;
+  }
+}
+
+/* 576px (small tablets) */
+@media (min-width: 480px) and (max-width: 575.98px) {
+  .screen-root {
+    font-size: 0.7rem;
+  }
+}
+
+/* 768px (tablets) */
 @media (min-width: 576px) and (max-width: 767.98px) {
   .screen-root {
     font-size: 0.8rem;
   }
 }
 
-/* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) and (max-width: 1023.98px) {
+/* 992px (small laptops) */
+@media (min-width: 768px) and (max-width: 991.98px) {
   .screen-root {
-    font-size: 1.1rem;
+    font-size: 0.9rem;
   }
 }
 
-@media (min-width: 1024px) {
+/* 1200px (desktops) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .screen-root {
+    font-size: 1rem;
+  }
+}
+
+/* 1400px (large desktops) */
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+  .screen-root {
+    font-size: 1.2rem;
+  }
+}
+
+/* 1920px (FullHD) */
+@media (min-width: 1400px) and (max-width: 1919.98px) {
   .screen-root {
     font-size: 1.4rem;
   }
 }
 
-/* FullHD и выше */
-@media (min-width: 1920px) {
+/* 2560px (2K) */
+@media (min-width: 1920px) and (max-width: 2559.98px) {
   .screen-root {
-    font-size: 1.7rem;
+    font-size: 1.6rem;
   }
 }
 
-/* 2K и выше */
-@media (min-width: 2560px) {
+/* 3840px (4K) */
+@media (min-width: 2560px) and (max-width: 3839.98px) {
   .screen-root {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
 }
 
-/* 4K и выше */
-@media (min-width: 3840px) {
+/* 7680px (8K) */
+@media (min-width: 3840px) and (max-width: 7679.98px) {
   .screen-root {
-    font-size: 2.3rem;
+    font-size: 3.4rem;
   }
 }
 
-/* 8K и выше — всё равно максимум 2rem */
 @media (min-width: 7680px) {
   .screen-root {
-    font-size: 2.6rem;
+    font-size: 7rem;
   }
 }
-

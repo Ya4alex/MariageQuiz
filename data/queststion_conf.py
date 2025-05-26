@@ -2,7 +2,7 @@ from data.table.models import QuestionType
 
 QUESTIONS = [
     # Тестовые вопросы
-    {
+    {  # 1
         'question_type': QuestionType.SINGLE_CHOICE,
         'question': "Мы на свадьбе",
         'images': [],
@@ -18,101 +18,105 @@ QUESTIONS = [
         'categories': ["_test"],
         'timer': 25.0,
     },
-    {
+    {  # 2
         'question_type': QuestionType.MULTIPLE_CHOICE,
         'question': "На свадьбе мы",
         'images': [],
-        'answer_images': [],
+        'answer_images': ['/static/quiz/2_a.jpg'],
         'answers': [
             "Прыгаем в торт",
             "Поздравляем жениха и невесту",
             "Спим",
-            "Радуемся за Акакия и Анжелину"
+            "Радуемся за Акакия и Анжелину",
+            "Общаемся с гостями",
+            "Все сразу"
         ],
         'correct_answers': [1, 3],
         'score': 0,
         'categories': ["_test"],
         'timer': 25.0,
     },
-
     # Стёпа
-    {
+    {  # 3
         'question_type': QuestionType.SINGLE_CHOICE,
         'question': "Первая фотография со Стёпой",
         'images': [],
-        'answer_images': ["/static/quiz/s_3_ans_1.jpg",  # "/static/quiz/s_3_ans_2.jpg",
-                          "/static/quiz/s_3_ans_3.jpg", "/static/quiz/s_3_ans_4.jpg"],
+        'answer_images': ["/static/quiz/3_a_1.jpg", "/static/quiz/3_a_2.jpg", "/static/quiz/3_a_3.jpg"],
         'answers': [
-            "в женском платье",
             "в пеленках",
             "В целлофановом пакете",
-            "В плетеной корзинке"
-        ],
-        'correct_answers': [0],
-        'score': 1.0,
-        'categories': ["stepa"],
-        'timer': 40.0,
-    },
-    {
-        'question_type': QuestionType.SINGLE_CHOICE,
-        'question': "Первую зарплату получал",
-        'images': [],
-        'answer_images': ['/static/quiz/s_4_ans.jpg'],
-        'answers': [
-            "Молоком",
-            "Мясом",
-            "Рыбой",
-            "Долларами"
-        ],
-        'correct_answers': [0],
-        'score': 1.0,
-        'categories': ["stepa"],
-        'timer': 40.0,
-    },
-    {
-        'question_type': QuestionType.SINGLE_CHOICE,
-        'question': "С кем Стёпа ловил красную рыбу в заповеднике?",
-        'images': [],
-        'answer_images': [],
-        'answers': [
-            "С друзьями",
-            "С местным браконьером",
-            "С инспектором заповедника",
-            "С папой"
+            "в платье",
+            "В плетеной корзинке",
         ],
         'correct_answers': [2],
         'score': 1.0,
         'categories': ["stepa"],
         'timer': 40.0,
     },
-    {
+    {  # 4
+        'question_type': QuestionType.SINGLE_CHOICE,
+        'question': "Первую зарплату получал",
+        'images': [],
+        'answer_images': ['/static/quiz/4_a.jpg'],
+        'answers': [
+            "Мясом",
+            "Рыбой",
+            "Долларами",
+            "Молоком",
+            "Пивом"
+        ],
+        'correct_answers': [3],
+        'score': 1.0,
+        'categories': ["stepa"],
+        'timer': 40.0,
+    },
+    {  # 5
+        'question_type': QuestionType.SINGLE_CHOICE,
+        'question': "С кем Стёпа ловил красную рыбу в заповеднике?",
+        'images': [],
+        'answer_images': ['/static/quiz/5_a_1.jpg', '/static/quiz/5_a_2.jpg'],
+        'answers': [
+            "С друзьями",
+            "С местным браконьером",
+            "С инспектором заповедника",
+            "С папой",
+            "С медведем наперегонки"
+        ],
+        'correct_answers': [2],
+        'score': 1.0,
+        'categories': ["stepa"],
+        'timer': 40.0,
+    },
+    {  # 6
         'question_type': QuestionType.SINGLE_CHOICE,
         'question': "Сколько у Стёпы племянников и племянниц",
         'images': [],
-        'answer_images': [],
+        'answer_images': ['/static/quiz/6_a.jpg'],
         'answers': [
             "21",
             "23",
             "17",
-            "19"
+            "19",
+            "2 (ну максимум 3)"
         ],
         'correct_answers': [1],
         'score': 1.0,
         'categories': ["stepa"],
         'timer': 40.0,
     },
-    {
+    {  # 7
         'question_type': QuestionType.MULTIPLE_CHOICE,
-        'question': "Правда, что",
-        'images': [],
-        'answer_images': [],
+        'question': "Правда, что Стёпа",
+        'images': ['/static/quiz/7_q.jpg'],
+        'answer_images': ['/static/quiz/7_a_1.jpg', '/static/quiz/7_a_2.jpg'],
         'answers': [
             "Проиграл в конкурсе мистер МГУ",
-            "Прыгал с парашутом",
-            "Стёпа был пажом",
+            "Прыгал с парашютом",
+            "Был пажом о рыцаря",
             "Играет на флейте",
             "Обошёл Эльбрус",
-            "Арестован за кражу"
+            "Арестован за кражу",
+            "Знает азбуку Морзе",
         ],
         'correct_answers': [2, 4, 5],
         'score': 1.0,
@@ -121,7 +125,7 @@ QUESTIONS = [
     },
 
     # Катя
-    {
+    {  # 8
         'question_type': QuestionType.SINGLE_CHOICE,
         'question': "Игрушка, которая сохранилась из раннего детства",
         'images': [],
@@ -137,7 +141,7 @@ QUESTIONS = [
         'categories': ["katya"],
         'timer': 40.0,
     },
-    {
+    {  # 9
         'question_type': QuestionType.SINGLE_CHOICE,
         'question': "В скольких школах училась Катя",
         'images': [],
@@ -153,7 +157,7 @@ QUESTIONS = [
         'categories': ["katya"],
         'timer': 40.0,
     },
-    {
+    {  # 10
         'question_type': QuestionType.MULTIPLE_CHOICE,
         'question': "Чем Катя действительно занималась?",
         'images': [],
@@ -177,25 +181,25 @@ QUESTIONS = [
         'correct_answers': [0, 1, 3, 5, 7, 8, 10, 11, 12],
         'score': 1.0,
         'categories': ["katya"],
-        'timer': 60.0,
+        'timer': 90.0,
     },
-    {
+    {  # 11
         'question_type': QuestionType.SINGLE_CHOICE,
         'question': "Какое правонарушение совершила Катя",
         'images': [],
-        'answer_images': [],
+        'answer_images': ['/static/quiz/11_a.jpg', ],
         'answers': [
             "Разбила в школе окно кидаясь пеналом",
             "Проехала на охраняемый объект производства с полным багажником алкоголя и это заметили",
-            "Украла торт из магазина около дома и сбежала",
-            "Уехала от полиции"
+            "Украла торт из магазина около дома и сбежала, торт съела",
+            "Уехала от полиции",
         ],
-        'correct_answers': [0],
+        'correct_answers': [1],
         'score': 1.0,
         'categories': ["katya"],
         'timer': 40.0,
     },
-    {
+    { # 12
         'question_type': QuestionType.SINGLE_CHOICE,
         'question': "Почему Катя в детстве хотела стать океанологом",
         'images': [],
@@ -206,15 +210,15 @@ QUESTIONS = [
             "Хотела жить у моря и ни о чём не думать",
             "Посмотрела фильм ВВС об океане и оказалась очень впечатлительной"
         ],
-        'correct_answers': [0],
+        'correct_answers': [3],
         'score': 1.0,
         'categories': ["katya"],
         'timer': 40.0,
     },
 
     # Катя и Стёпа
-    {
-        'question_type': QuestionType.MULTIPLE_CHOICE,
+    { # 13
+        'question_type': QuestionType.SINGLE_CHOICE,
         'question': "Выберите правильные ответы",
         'images': [],
         'answer_images': [],
@@ -224,23 +228,23 @@ QUESTIONS = [
             "Имеют одинаковый музыкальный вкус",
             "Ребята любят совместный просмотр фильмов"
         ],
-        'correct_answers': [0, 3],
+        'correct_answers': [1],
         'score': 1.0,
         'categories': ["stepa_katya"],
         'timer': 40.0,
     },
-    {
+    { # 14
         'question_type': QuestionType.SINGLE_CHOICE,
         'question': "Где Стёпа сделал предложение",
         'images': [],
-        'answer_images': [],
+        'answer_images': ['/static/quiz/14_a.jpg'],
         'answers': [
             "На берегу Волги",
             "На крыше",
             "На колесе обозрения",
             "На свадьбе брата"
         ],
-        'correct_answers': [0],
+        'correct_answers': [1],
         'score': 1.0,
         'categories': ["stepa_katya"],
         'timer': 40.0,
@@ -256,7 +260,7 @@ QUESTIONS = [
             "Сметут всю еду из холодильника",
             "Будут настаивать на уборке"
         ],
-        'correct_answers': [0],
+        'correct_answers': [1],
         'score': 1.0,
         'categories': ["stepa_katya"],
         'timer': 40.0,

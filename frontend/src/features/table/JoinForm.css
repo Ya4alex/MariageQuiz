@@ -17,6 +17,7 @@
   margin: 0;
   font-size: 1em;
 }
+
 .join-form-container ul {
   display: flex;
   flex-direction: column;
@@ -36,9 +37,10 @@
 
 .join-form-container input[type="text"] {
   width: 100%;
-  padding: 0.8rem 0rem;
+  padding: 0.8rem 0.8rem;
   margin: 0.7rem 0 1rem 0;
   box-sizing: border-box;
+
 
   border: 1px solid var(--border-color);
   border-radius: 0.7rem;

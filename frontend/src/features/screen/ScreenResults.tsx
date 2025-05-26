@@ -1,39 +1,12 @@
 import ReactConfetti from "react-confetti";
 import { useWindowSize } from "react-use";
 import type { ScreenTablesStateEvent } from "../../data/events";
-import type { category } from "../../data/models";
+import { categoryMorphMap, type category } from "../../data/models";
 import "./ScreenResults.css";
 
 interface ScreenResultsProps {
   screenState: ScreenTablesStateEvent;
 }
-
-const categoryMorphMap = {
-  stepa: {
-    short: "Стёпа",
-    full: (
-      <>
-        <b style={{ fontSize: "1.5em" }}>🎉</b> Лучше всех знают Стёпу
-      </>
-    ),
-  },
-  katya: {
-    short: "Катя",
-    full: (
-      <>
-        <b style={{ fontSize: "1.5em" }}>🎊</b> Лучше всех знают Катю
-      </>
-    ),
-  },
-  stepa_katya: {
-    short: "Катя и Стёпа",
-    full: (
-      <>
-        <b style={{ fontSize: "1.5em" }}>✨</b> Лучше всех знают Катю и Стёпу
-      </>
-    ),
-  },
-};
 
 export const ScreenResults = ({ screenState }: ScreenResultsProps) => {
   const results = screenState.results;
@@ -63,14 +36,14 @@ export const ScreenResults = ({ screenState }: ScreenResultsProps) => {
                     Стол № {table.table_id} {table.table_name}
                   </b>
                   <span>—</span>
-                  <span>{table.score} баллов</span>
+                  <span>{+table.score.toFixed(2)} баллов</span>
                 </div>
                 <div>
                   {Object.entries(table.categories)
                     .sort((a, b) => b[1] - a[1])
                     .map(([cat, score]) => (
                       <span key={cat} className="screen-result-info screen-result-box-info">
-                        <b>{categoryMorphMap[cat as category]["short"]}:</b> {score}
+                        <b>{categoryMorphMap[cat as category]["short"]}:</b> {+score.toFixed(2)}
                       </span>
                     ))}
                 </div>
@@ -78,7 +51,7 @@ export const ScreenResults = ({ screenState }: ScreenResultsProps) => {
             ))}
           </ol>
         </div>
-        <h2>Лучшие по категориям</h2>
+        <h2 className="screen-reslults-title-catrgories-h2">Лучшие по категориям</h2>
         <ul className="screen-results-categories-list">
           {Object.entries(results.category_winners).map(([cat, table]) => (
             <li key={cat}>
@@ -89,7 +62,7 @@ export const ScreenResults = ({ screenState }: ScreenResultsProps) => {
                     Стол № {table.table_id} {table.table_name}
                   </span>
                   <div className="screen-result-info">
-                    {table.categories[cat as category]} баллов
+                    {+table.categories[cat as category].toFixed(2)} баллов
                   </div>
                 </>
               ) : (

@@ -22,6 +22,7 @@ export const useTableWebSocket = (tableId: number) => {
 
       ws.onmessage = (event) => {
         const data: WsEvent = JSON.parse(event.data);
+        console.log(data); // Логирование входящих сообщений
         switch (data.event_type) {
           case "table":
             setTableState(data as TableEvent);

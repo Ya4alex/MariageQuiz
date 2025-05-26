@@ -2,7 +2,7 @@ from typing import List
 
 from pydantic import BaseModel
 
-from data.table.models import TableState, ClientRole, Question, GameState, TableResult, ScreenResults
+from data.table.models import ClientRole, Question, GameState, ScreenResults, ToTableResult, TableData
 
 
 class BaseWsEvent(BaseModel):
@@ -11,20 +11,11 @@ class BaseWsEvent(BaseModel):
 
 # from server --------------------------------------------
 
-class TableData(BaseModel):
-    table_id: int
-    table_name: str | None = None
-    table_state: TableState
-    clients: int
-    table_answers: List[int] | None = None
-    answered: bool | None = None
-
-
 class TableEvent(BaseWsEvent, TableData):
     event_type: str = "table"
     role: ClientRole
     question: Question | None = None
-    result: TableResult | None = None
+    result: ToTableResult | None = None
 
 
 class ErrorEvent(BaseWsEvent):
@@ -56,12 +47,21 @@ class FromAnswerQuestionEvent(BaseWsEvent):
 
 # from admin
 class FromAdminEventTypes:
+    from_admin_resize_tables = "from_admin_resize_tables"
     from_admin_change_leader = "from_admin_change_leader"
     from_admin_start_game = "from_admin_start_game"
     from_admin_show_answers = "from_admin_show_answers"
+    from_admin_previous_question = "from_admin_previous_question"
     from_admin_next_question = "from_admin_next_question"
     from_admin_show_results = "from_admin_show_results"
     from_admin_reset_game = "from_admin_reset_game"
+
+    from_admin_next_step = "from_admin_next_step"
+
+
+class ResizeTablesEvent(BaseWsEvent):
+    event_type: str = FromAdminEventTypes.from_admin_resize_tables
+    count: int
 
 
 class FromAdminChangeLeaderEvent(BaseWsEvent):
@@ -77,6 +77,10 @@ class FromAdminShowAnswersEvent(BaseWsEvent):
     event_type: str = FromAdminEventTypes.from_admin_show_answers
 
 
+class FromAdminPreviousQuestionEvent(BaseWsEvent):
+    event_type: str = FromAdminEventTypes.from_admin_previous_question
+
+
 class FromAdminNextQuestionEvent(BaseWsEvent):
     event_type: str = FromAdminEventTypes.from_admin_next_question
 
@@ -87,6 +91,10 @@ class FromAdminResetGameEvent(BaseWsEvent):
 
 class FromAdminResultsEvent(BaseWsEvent):
     event_type: str = FromAdminEventTypes.from_admin_show_results
+
+
+class FromAdminNextStepEvent(BaseWsEvent):
+    event_type: str = FromAdminEventTypes.from_admin_next_step
 
 
 # to screen

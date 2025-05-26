@@ -3,6 +3,7 @@ import QuestionForm from "./QuestionForm";
 import { useTableWebSocket } from "./useTableState";
 import { useParams } from "react-router-dom";
 import "./TablePage.css";
+import TableResult from "./TableResult";
 
 const TablePage = () => {
   const { id } = useParams<{ id: string }>();
@@ -23,6 +24,7 @@ const TablePage = () => {
           sendAnswerQuestion={sendAnswerQuestion}
         />
       )}
+      {tableState?.table_state === "in_results" && <TableResult tableState={tableState} />}
     </div>
   );
 };

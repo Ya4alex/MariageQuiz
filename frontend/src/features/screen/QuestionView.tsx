@@ -29,7 +29,10 @@ export const QuestionView = ({ screenState }: QuestionProps) => {
       />
       <div className="question-view">
         <div className="question-view-item" style={imgs.length > 0 ? { maxWidth: "50vw" } : {}}>
-          <h2>Вопрос № {question.id + 1}</h2>
+          <h2>
+            Вопрос № {question.id + 1}
+            {question.id < 2 && <small>, тестовый</small>}
+          </h2>
           <div className="question-images">
             {imgs.map((img, idx) => (
               <img key={idx} src={img} />

@@ -68,6 +68,12 @@ class QuestionManager:
             return None
         return self.questions[self.__current_index]
 
+    def previous_question(self) -> QuestionObject | None:
+        if self.__current_index is None or self.__current_index <= 0:
+            raise LastQuestionError
+        self.__current_index -= 1
+        return self.questions[self.__current_index]
+
     def next_question(self) -> QuestionObject | None:
         if self.__current_index is None:
             self.__current_index = -1
@@ -80,7 +86,7 @@ class QuestionManager:
 class Result:
     def __init__(self):
         self.answers: Dict[int, List[int]] = {}
-        self.score: float = 0
+        self.question_score: Dict[int, float] = defaultdict(lambda: 0)
         self.categories: Dict[str, float] = defaultdict(lambda: 0)
 
     @staticmethod
@@ -99,10 +105,13 @@ class Result:
         return round(max_points * f1, 2)
 
     def answer_question(self, question: QuestionObject, table_answers: List[int]):
-        self.answers[question.id] = table_answers.copy()
-
         score = self.f1_score_based_points(question.correct_answers, table_answers, question.score)
-        self.score += score
+        self.answers[question.id] = table_answers.copy()
+        self.question_score[question.id] = score
         for category in question.categories:
             self.categories[category] += score
         return score
+
+    @property
+    def score(self) -> float:
+        return sum(self.question_score.values())

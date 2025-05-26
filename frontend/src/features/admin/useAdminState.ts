@@ -55,6 +55,20 @@ export const useAdmin = () => {
     };
   }, []);
 
+  const sendAdminResizeTables = useCallback(
+    (count: number) => {
+      if (socket) {
+        socket.send(
+          JSON.stringify({
+            event_type: "from_admin_resize_tables",
+            count,
+          })
+        );
+      }
+    },
+    [socket]
+  );
+
   const sendAdminChangeLeader = useCallback(
     (tableId: number) => {
       if (socket) {
@@ -84,6 +98,16 @@ export const useAdmin = () => {
       socket.send(
         JSON.stringify({
           event_type: "from_admin_show_answers",
+        })
+      );
+    }
+  }, [socket]);
+
+  const sendAdminPreviousQuestion = useCallback(() => {
+    if (socket) {
+      socket.send(
+        JSON.stringify({
+          event_type: "from_admin_previous_question",
         })
       );
     }
@@ -119,12 +143,25 @@ export const useAdmin = () => {
     }
   }, [socket]);
 
+  const sendAdminNextStep = useCallback(() => {
+    if (socket) {
+      socket.send(
+        JSON.stringify({
+          event_type: "from_admin_next_step",
+        })
+      );
+    }
+  }, [socket]);
+
   return {
+    sendAdminResizeTables,
     sendAdminChangeLeader,
     sendAdminStartGame,
     sendAdminShowAnswers,
+    sendAdminPreviousQuestion,
     sendAdminNextQuestion,
     sendAdminShowResults,
     sendAdminResetGame,
+    sendAdminNextStep
   };
 };

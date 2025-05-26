@@ -1,5 +1,5 @@
 import enum
-from typing import List, Dict
+from typing import List, Dict, Tuple
 
 from pydantic import BaseModel
 
@@ -32,6 +32,14 @@ class QuestionType(enum.Enum):
     MULTIPLE_CHOICE = "multiple_choice"
 
 
+class TableData(BaseModel):
+    table_id: int
+    table_name: str | None = None
+    table_state: TableState
+    clients: int
+    table_answers: List[int] | None = None
+    answered: bool | None = None
+
 class Question(BaseModel):
     id: int
     categories: List[str]
@@ -52,6 +60,18 @@ class TableResult(BaseModel):
     score: float
     categories: Dict[str, float]
     answers: Dict[int, List[int]]
+
+
+class ToTableResult(BaseModel):
+    score: float
+    question_score: Dict[int, float]
+    categories: Dict[str, float]
+    answers: Dict[int, List[int]]
+    questions: List[Question]
+
+    place: int | None
+    place_categories: Dict[str, int] | None
+    place_amount: int
 
 
 class ScreenResults(BaseModel):

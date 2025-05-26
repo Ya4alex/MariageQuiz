@@ -1,4 +1,4 @@
-import type { TableData, Question, ScreenResults, TableResult } from "./models";
+import type { TableData, Question, ScreenResults, ToTableResult } from "./models";
 
 // Базовое событие
 export interface WsEvent {
@@ -14,7 +14,7 @@ export interface ErrorWsEvent extends WsEvent {
 export interface TableEvent extends WsEvent, TableData {
   role: "leader" | "observer";
   question: Question | null;
-  result: TableResult | null;
+  result: ToTableResult | null;
 }
 
 // Событие для экрана: состояние всех столов, вопрос, результаты
