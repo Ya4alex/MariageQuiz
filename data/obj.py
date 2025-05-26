@@ -135,6 +135,8 @@ class Table:
                     self.state = TableState.waiting_leader
         elif client in self.observers:
             self.observers.remove(client)
+        await self.notify_clients()
+        await self.game.notify_screens()
 
     async def change_leader(self):
         if not self.leader:
@@ -152,6 +154,9 @@ class Table:
         self.observers.append(client)
         client.role = ClientRole.observer
         await client.send_table_event()
+
+        await self.notify_clients()
+        await self.game.notify_screens()
 
     async def notify_clients(self):
         await asyncio.gather(*[
